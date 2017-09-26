@@ -1,6 +1,7 @@
 package meeldetuletus;
-
 import java.util.HashMap;
+import org.json.simple.JSONObject;
+
 
 public class Meeldetuletus {
 	public static void main(String[] args) {
@@ -9,6 +10,8 @@ public class Meeldetuletus {
 		// System.out.println(app.hasUpperBeg("Marko"));
 		// System.out.println(app.compareBigSmall("uhuhiHASIDHishdIU"));
 		System.out.println(app.assertBothValues(6, null));
+		
+		
 	}
 
 	private boolean hasUpperBeg(String str) {
@@ -66,5 +69,12 @@ public class Meeldetuletus {
 		return comparison;
 
 	}
-
+//	3. Sisendiks json( ja sıne), v‰ljundiks sıne(valida mıne atribuudi v‰‰rtus.
+	private String jsonString(String[] args) {
+		JSONObject strattr = new JSONObject();
+		strattr.put("refridgerator", "food");
+		System.out.println(strattr);
+		return "";
+		
+	}
 }
