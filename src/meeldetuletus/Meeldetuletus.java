@@ -11,14 +11,6 @@ public class Meeldetuletus {
 		System.out.println(app.assertBothValues(6, null));
 	}
 
-	// 1 Sisendiks sõne , väljundiks tõeväärtus +
-	// Teha kindlaks, kas sõna algab suure tähega +
-	// Teha kindlaks, kas suuri tähti on rohkem kui väikseid +
-	// 2 Sisendiks sõne ja number, väljundiks tõeväärtus
-	// Otsustada, kas etteantud sõna “tõlgitult” on sama, mis teine parameetril
-	// (number)
-	// isNumberSameStringNumber("kolm", 3) -> true
-	// isNumberSameStringNumber("kolm", 1) -> false
 	private boolean hasUpperBeg(String str) {
 		char firstChar = str.charAt(0);
 		return Character.isUpperCase(firstChar);
@@ -32,7 +24,6 @@ public class Meeldetuletus {
 		for (int i = 0; i < str.length(); i++) {
 
 			char c = str.charAt(i);
-			// System.out.println(c + " - " + Character.isUpperCase(c));
 			if (Character.isUpperCase(c)) {
 				up++;
 			} else {
@@ -51,7 +42,6 @@ public class Meeldetuletus {
 		return result;
 	}
 
-	// translateNumberToWord(2) -> "kaks"
 	public String translateNumberToWord(int num) {
 		HashMap<Integer, String> numbers = new HashMap<>();
 		numbers.put(0, "null");
@@ -69,12 +59,10 @@ public class Meeldetuletus {
 		return output;
 	}
 
-	// isSameNumberValues(4, "neli") -> true
-	// isSameNumberValues(5, "neli") -> false
 	public boolean assertBothValues(int num, String numString) {
 		String translated = translateNumberToWord(num);
-	System.out.println(translated);
-	boolean comparison = translated.equals(numString);
+		System.out.println(translated);
+		boolean comparison = translated.equals(numString);
 		return comparison;
 
 	}
